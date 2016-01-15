@@ -9,15 +9,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -49,6 +46,12 @@ Plugin 'wincent/command-t'
 Plugin 'FuzzyFinder'
 " mango
 Plugin 'mango.vim'
+" scala
+Plugin 'derekwyatt/vim-scala'
+" rainbow parentheses
+Plugin 'kien/rainbow_parentheses.vim'
+"auto pair
+Plugin 'jiangmiao/auto-pairs'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -105,3 +108,5 @@ color mango
 
 " map <leader>
 :let mapleader=","
+set hlsearch
+nnoremap j :%!python -m json.tool<CR>
