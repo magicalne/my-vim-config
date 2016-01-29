@@ -54,6 +54,8 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'jiangmiao/auto-pairs'
 " surround.vim
 Plugin 'tpope/vim-surround'
+" javascript
+Plugin 'jelera/vim-javascript-syntax'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -111,7 +113,7 @@ color mango
 " map <leader>
 :let mapleader=","
 set hlsearch
-nnoremap j :%!python -m json.tool<CR>
+nnoremap tj :%!python -m json.tool<CR>
 
 " size of a hard tabstop
 set tabstop=4
