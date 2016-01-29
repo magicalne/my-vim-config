@@ -50,8 +50,10 @@ Plugin 'mango.vim'
 Plugin 'derekwyatt/vim-scala'
 " rainbow parentheses
 Plugin 'kien/rainbow_parentheses.vim'
-"auto pair
+" auto pair
 Plugin 'jiangmiao/auto-pairs'
+" surround.vim
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -110,3 +112,30 @@ color mango
 :let mapleader=","
 set hlsearch
 nnoremap j :%!python -m json.tool<CR>
+
+" size of a hard tabstop
+set tabstop=4
+" size of an indent
+set shiftwidth=4
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=4
+" size of a hard tabstop
+set tabstop=4
+" size of an indent
+set shiftwidth=4
+" a combination of spaces and tabs are used to simulate tab stops at a width
+" other than the (hard)tabstop
+set softtabstop=4
+
+" tab
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+let notabs = 0
+nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
+
+nnoremap tt  :tabedit<Space>
+
