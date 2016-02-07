@@ -56,6 +56,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 " javascript
 Plugin 'jelera/vim-javascript-syntax'
+" Status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -106,7 +109,7 @@ function! JSFormat()
 endfunction
 " end esformatter config
 
-set background=dark     " you can use `dark` or `light` as your background
+set background=light " you can use `dark` or `light` as your background
 syntax on
 color mango
 
@@ -129,6 +132,7 @@ set shiftwidth=4
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
 set softtabstop=4
+set number
 
 " tab
 nnoremap <C-Left> :tabprevious<CR>
@@ -141,3 +145,8 @@ nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Ba
 
 nnoremap tt  :tabedit<Space>
 
+"status line
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+set laststatus=2

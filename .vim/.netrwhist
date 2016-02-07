@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/chandler/git/chandler/hello-scala'
-let g:netrw_dirhist_2='/lib/udev/rules.d'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/magiclane/git/my/my-vim-config/.vim'
+let g:netrw_dirhist_2='/Users/magiclane/git/dr/morpheus/core'
+let g:netrw_dirhist_3='/Users/magiclane/git/dr/morpheus/core/src'
+let g:netrw_dirhist_4='/Users/magiclane/git/dr/morpheus/core'
