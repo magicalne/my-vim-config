@@ -109,7 +109,7 @@ function! JSFormat()
 endfunction
 " end esformatter config
 
-set background=light " you can use `dark` or `light` as your background
+set background=dark " you can use `dark` or `light` as your background
 syntax on
 color mango
 
