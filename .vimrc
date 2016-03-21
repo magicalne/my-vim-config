@@ -119,19 +119,13 @@ set hlsearch
 nnoremap tj :%!python -m json.tool<CR>
 
 " size of a hard tabstop
-set tabstop=4
+set tabstop=2
 " size of an indent
-set shiftwidth=4
+set shiftwidth=2
 " a combination of spaces and tabs are used to simulate tab stops at a width
 " other than the (hard)tabstop
-set softtabstop=4
-" size of a hard tabstop
-set tabstop=4
-" size of an indent
-set shiftwidth=4
-" a combination of spaces and tabs are used to simulate tab stops at a width
-" other than the (hard)tabstop
-set softtabstop=4
+set softtabstop=2
+
 set number
 
 " tab
@@ -150,3 +144,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set laststatus=2
+
+"Command T
+set wildignore+=node_modules
+set autochdir
+
+"no swap file
+set noswapfile
