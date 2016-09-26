@@ -40,8 +40,6 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 " SnipMate-nodejs
 Plugin 'git@github.com:jamescarr/snipmate-nodejs.git'
-" command-t
-Plugin 'wincent/command-t'
 " FuzzyFinder"
 Plugin 'FuzzyFinder'
 " mango
@@ -59,6 +57,8 @@ Plugin 'jelera/vim-javascript-syntax'
 " Status line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" CtrlP
+Plugin 'kien/ctrlp.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -75,15 +75,15 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " vim-jsbeautify config
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+"autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
   " for json 
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
+"autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
   " for jsx 
-autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
+"autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
   " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+"autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
   " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+"autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " esformatter config
 nnoremap <silent> <leader>e :call JSFormat()<cr>
@@ -145,9 +145,19 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set laststatus=2
 
-"Command T
+"ignore
 set wildignore+=node_modules
 set autochdir
 
 "no swap file
 set noswapfile
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
